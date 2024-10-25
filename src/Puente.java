@@ -1,10 +1,10 @@
 public class Puente {
 
-    private static final int PESO_MAXIMO = 350;
+    private static final int PESO_MAXIMO = 200;
     private static final int MAX_PERSONAS = 4;
     private static final int MAX_PERSONAS_POR_SENTIDO = 3;
 
-    private int peso = 0; // Peso actual en el puente
+    private int peso = 0; //peso actual en el puente
     private int getNumPersonasIzquierda = 0;
     private int getNumPersonasDerecha = 0;
     private int personasIzquierdaCruzando = 0;
@@ -33,7 +33,7 @@ public class Puente {
         // personas en el puente
         if (this.peso + persona.getPeso() <= Puente.PESO_MAXIMO
                 && this.getNumPersonasIzquierda + this.getNumPersonasDerecha < Puente.MAX_PERSONAS) {
-            // verificar si la persona esta en el lado izquierdo
+            //verificar si la persona esta en el lado izquierdo
             if (lado == 0) {
                 // Limitar a maximo 3 personas cruzando desde el lado izquierdo
                 if (personasIzquierdaCruzando < MAX_PERSONAS_POR_SENTIDO) {
